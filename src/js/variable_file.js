@@ -1,26 +1,26 @@
-export const previewWrapper = document.getElementById('previewWrapper');
-export const wrapper = document.getElementById('wrapper');
-export const videoContainer = document.getElementById('videoContainer');
-export const inputSearch = document.getElementById('inputSearch');
-export const buttonSearch = document.getElementById('buttonSearch');
-export const videoBlock = document.getElementById('videoBlock');
-export const closedPlayBlockButton = document.getElementById('closedPlayBlockButton');
-export const header = document.getElementsByTagName('header');
-export const main = document.getElementsByTagName('main');
-export const footer = document.getElementsByTagName('footer');
-export const playVideoBlock = document.getElementById('playVideoBlock');
-export const videoIframe = document.getElementById('iframe');
-export const button = document.getElementsByClassName("button");
-export const videoItems = [];
-export const videoTitle = [];
-export const videoImg = [];
-export const maxresult = 25;
-export const youtubeAPI = "AIzaSyA47IwEeeJUsiXUeT4NtkVZUZCxNX02bWs";
-export const data = {};
-export const buttonDayNight = document.getElementById('buttonDayNight');
-
+export var previewWrapper = document.getElementById('previewWrapper');
+export var wrapper = document.getElementById('wrapper');
+export var videoContainer = document.getElementById('videoContainer');
+export var inputSearch = document.getElementById('inputSearch');
+export var buttonSearch = document.getElementById('buttonSearch');
+export var videoBlock = document.getElementById('videoBlock');
+export var closedPlayBlockButton = document.getElementById('closedPlayBlockButton');
+export var buttonDayNight = document.getElementById('buttonDayNight');
+export var header = document.getElementsByTagName('header');
+export var main = document.getElementsByTagName('main');
+export var footer = document.getElementsByTagName('footer');
+export var playVideoBlock = document.getElementById('playVideoBlock');
+export var videoIframe = document.getElementById('iframe');
+export var button = document.getElementsByClassName("button");
+export var videoItems = [];
+export var videoTitle = [];
+export var videoImg = [];
+export var maxresult = 25;
+export var youtubeAPI = "AIzaSyA47IwEeeJUsiXUeT4NtkVZUZCxNX02bWs";
+export var data = {};
 // eslint-disable-next-line import/no-mutable-exports
-export let positionCarousel = 0;
+export var positionCarousel = 0;
 export function inPositionCarousel(num) {
-    positionCarousel += num;
+    return positionCarousel += num;
 }
+//# sourceMappingURL=variable_file.js.map
