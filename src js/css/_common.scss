@@ -1,0 +1,80 @@
+$margin: 0 auto;
+
+%flex_line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%flex_column {
+  @extend %flex_line;
+  flex-direction: column;
+}
+
+%blue_button {
+  all: unset;
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  font-family: 'FuturaMediumC';
+  font-size: 20px;
+  line-height: 1.5em;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+@mixin hover {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+
+@mixin flex_line () {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex_column () {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@font-face {
+  font-family: 'FuturaMediumC';
+  src: url('../assets/fonts/futuramediumc.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;  
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  margin: $margin;
+  background-color:rgb(37, 37, 37);
+  height: 100vh;
+  font-family: 'FuturaMediumC';
+  font-size: 18px;
+  color: rgb(218, 218, 206); 
+}
+
+@media screen and (max-width: 530px) {
+  .wrapper {
+    height: auto;
+  }
+}

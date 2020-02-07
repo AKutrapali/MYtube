@@ -1,1 +1,1 @@
-https://AKutrapali.github.io/MYtube
+# webpack-boilerplate

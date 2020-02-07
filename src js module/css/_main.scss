@@ -1,0 +1,300 @@
+.preview_wrapper {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color:rgb(37, 37, 37);
+  @include flex_line;
+  align-items: center;
+  justify-content: center;
+  p {
+    font-size: 70px;
+    color: white;
+    font-family: 'FuturaMediumC';
+    text-align : center;
+  }
+}
+
+.wrapper{
+  position: relative;
+  header {
+    widows: 100%;
+    height: 8%;
+    .header_logo{
+      @include flex_line;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 30px;
+      .logo_blue {
+        color: rgb(0, 0, 255);
+        margin-top: 10px;
+        font-weight: bold;
+      }
+      .logo_white {
+        margin-top: 10px;
+      }
+   
+
+    }
+  }
+  main{
+    width: 100%;
+    height: 84%;
+    @include flex_column;
+    justify-content: space-between;
+    .search_block {
+      @include flex_line;
+      justify-content: space-around;;
+      width: 100%;
+      height: 10%;
+      .input_search {
+        padding-left: 6px;
+        width: 60%;
+        border-radius: 10px;
+        font-size: 20px;
+      }
+      .button {
+        @extend %blue_button;
+        width: 15%;
+      }
+      .button:hover {
+        background-color: white;
+        color: blue;
+      }
+      .border_black {
+        border: 2px solid black;
+      }
+    }
+    .video_block_wrapper {
+      width: 100%;
+      height: 90%;
+      @include flex_column;
+      justify-content: center;
+      .video_block {
+        width: 100%;
+        @include flex_column;
+        .left_button{
+          z-index: 105;
+          margin-left: 1%;
+          position: absolute;
+          left: 0%;
+          top: 55%;
+          cursor: pointer;
+          font-size: 25px;
+        }
+        .right_button{
+          z-index: 105;
+          position: absolute;
+          margin-right: 1%;
+          right: 0%;
+          top: 55%;
+          cursor: pointer;
+          font-size: 25px;
+        }
+        .video_title{
+          height: 10%;
+          width: 70%;
+          text-align : center;
+          margin-top: 20px;
+          font-size: 20px;
+        }
+        .video_container{
+          position: relative;
+          width: 100%;
+          padding-top: 1.5%;
+          @include flex_line;
+          overflow: hidden;
+          
+          .video_items{
+            width: 40%;
+            
+            .border_black {
+              border: 2px solid black;
+            }
+            .video_img{ 
+              width: 100%;
+              background-color:rgb(61, 61, 61);
+              background-repeat: no-repeat;
+              background-position: center center;
+              background-size: cover;
+              border-radius: 10px;
+              border: 2px solid blue; 
+            }
+          }
+        }
+      }
+    }  
+  }
+  footer{
+    @include flex_line;
+    justify-content: space-between;
+    height: 8%;
+    .footer_text{
+      margin-left: 20px;
+      color: blue;
+    }
+    .button {
+      @extend %blue_button;
+      padding: 0 20px;
+      margin-right: 2%;
+    }
+    .button:hover {
+      background-color: white;
+      color: blue;
+    }
+    .border_black {
+      border: 2px solid black;
+    }
+  }
+  .play_video_block {
+    display: none;
+    width: 720px;
+    height: 405px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -202px 0 0 -360px;
+    z-index: 102;
+    iframe {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      border: 2px solid rgb(0, 0, 255);
+    }
+    
+  }
+  .button {
+    @extend %blue_button;
+    width: 15%;
+    z-index: 103;
+  }
+  .button:hover {
+    background-color: white;
+    color: blue;
+  }
+  .border_black {
+    border: 2px solid black;
+  }
+  #closedPlayBlockButton {
+    display: none;
+    position: absolute;
+    right: 2%;
+    top: 2%;
+  }
+}
+
+.border_black {
+  border: 2px solid black;
+}
+
+@media screen and (min-width: 550px) and (max-width: 750px) {
+  .wrapper .play_video_block {
+    width: 500px;
+    height: 281px; 
+    margin: -140px 0 0 -250px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .preview_wrapper {
+    p {
+      font-size: 35px;
+    }
+  }
+  .wrapper {
+    height: auto;
+    header {
+      height: auto;
+      .header_logo {
+        justify-content: center;
+        .logo_blue, .logo_white {
+        margin-bottom: 15px;
+        }
+      }
+    }
+    main {
+      height: auto;
+      .search_block{
+        width: 80%;
+        justify-content: inherit;
+        margin-bottom: 30px;
+        .input_search {
+          border-radius: 0;
+          height: 27px;
+          width: 70%;
+        }
+        .button {
+          border-radius: 0;
+          height: 27px;
+          font-size: 17px;
+          width: 20%;
+        }
+      }
+      .video_block_wrapper {
+        .video_block {
+          .left_button, .right_button {
+          display: none;
+          }
+          .video_container {
+            .video_items {
+              .video_img {
+                border-radius: 0;
+              }
+              .video_title {
+                width: 90%;
+                margin: 5px auto 15px auto;
+              }
+            }
+          }
+        }
+      }
+    }
+    footer {
+      height: auto;
+      .button {
+        position: fixed;
+        right: 4%;
+        bottom: 4%;
+        border-radius: 0;
+        padding: 0;
+        width: 16%;
+      }
+    }
+    .play_video_block {
+      position: fixed;
+      width: 85vw;
+      height: 60vw;
+      top: 6%;
+      left: 6%;
+      margin: auto;
+      z-index: 102;
+      iframe {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+      } 
+    }
+    #closedPlayBlockButton {
+      border-radius: 0px;
+      position: fixed;
+      top: 2.5%;
+      right: 2%;
+      
+    }
+  }
+ 
+  .video_container {
+    flex-direction: column;
+    align-items: center;
+    .video_items {
+      width: 80%;
+    }
+  }
+  .button {
+    border-radius: 0px;
+
+  }
+  .wrapper main .video_block_wrapper .video_block .video_container .video_items {
+    width: 80%;
+  }
+
+}
